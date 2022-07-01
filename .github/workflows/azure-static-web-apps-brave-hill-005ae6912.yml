@@ -19,6 +19,9 @@ jobs:
         with:
           submodules: true
       - name: Build And Deploy
+        env:
+          REACT_APP_API_URL: "https://public-api.wordpress.com/rest/v1.1/sites/adityadotdev.wordpress.com/posts"
+          CI: false
         id: builddeploy
         uses: AdityaLNU/staticstiesactionoryx@master
         with:
